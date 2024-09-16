@@ -1,8 +1,17 @@
 let humanscore = 0;
 let computerscore = 0;
+let computerChoice = 0;
 
 function getComputerChoice () {
-    return Math.round(Math.random() * 2);
+    let computerNum = Math.round(Math.random() * 2);
+    switch (computerNum) {
+        case computerNum = 0 : computerChoice = "rock";
+        break;
+        case computerNum = 1 : computerChoice = "paper";
+        break;
+        case computerNum = 2 : computerChoice = "scissors";
+        break;
+    }
 }
 
 function getHumanChoice () {
