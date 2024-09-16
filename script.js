@@ -1,6 +1,7 @@
 let humanscore = 0;
 let computerscore = 0;
 let computerChoice = 0;
+let humanNum = 0;
 
 function getComputerChoice () {
     let computerNum = Math.round(Math.random() * 2);
@@ -24,13 +25,13 @@ function getHumanChoice () {
     //Check if human choice is equal to the available choices. If not, tell human to try again
     //Turn human chocie into a number so we can compute it
     switch (humanChoice) {
-        case humanChoice = "rock" : humanchoice = 0;
+        case humanChoice = "rock" : humanNum = 0;
         return 0;
         break;
-        case humanChoice = "paper" : humanchoice = 1;
+        case humanChoice = "paper" : humanNum = 1;
         return 1;
         break;
-        case humanChoice = "scissors": humanchoice = 2;
+        case humanChoice = "scissors": humanNum = 2;
         return 2;
         break;
     }
