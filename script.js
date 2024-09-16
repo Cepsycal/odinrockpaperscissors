@@ -8,13 +8,10 @@ function getComputerChoice () {
     switch (computerNum) {
         case computerNum = 0 : computerChoice = "rock";
         return 0;
-        break;
         case computerNum = 1 : computerChoice = "paper";
         return 1;
-        break;
         case computerNum = 2 : computerChoice = "scissors";
         return 2;
-        break;
     }
 }
 
@@ -29,13 +26,18 @@ function getHumanChoice () {
     //Turn human chocie into a number so we can compute it
     switch (humanChoice) {
         case humanChoice = "rock" : humanNum = 0;
-        return 0;
-        break;
+        return rock;
         case humanChoice = "paper" : humanNum = 1;
         return 1;
-        break;
         case humanChoice = "scissors": humanNum = 2;
         return 2;
-        break;
+        default: alert("Please Try Again")
     }
     }
+
+function playRound (humanChoice, computerChoice) {
+
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
