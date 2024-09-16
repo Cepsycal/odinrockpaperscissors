@@ -7,10 +7,13 @@ function getComputerChoice () {
     let computerNum = Math.round(Math.random() * 2);
     switch (computerNum) {
         case computerNum = 0 : computerChoice = "rock";
+        return 0;
         break;
         case computerNum = 1 : computerChoice = "paper";
+        return 1;
         break;
         case computerNum = 2 : computerChoice = "scissors";
+        return 2;
         break;
     }
 }
