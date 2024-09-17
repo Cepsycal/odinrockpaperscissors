@@ -6,12 +6,12 @@ let humanNum = 0;
 function getComputerChoice () {
     let computerNum = Math.round(Math.random() * 2);
     switch (computerNum) {
-        case computerNum = 0 : computerChoice = "rock";
-        return 0;
-        case computerNum = 1 : computerChoice = "paper";
-        return 1;
-        case computerNum = 2 : computerChoice = "scissors";
-        return 2;
+        case computerNum = 0 :
+        return "rock";
+        case computerNum = 1 :
+        return "paper";
+        case computerNum = 2 :
+        return "scissors";
     }
 }
 
@@ -25,18 +25,19 @@ function getHumanChoice () {
     //Check if human choice is equal to the available choices. If not, tell human to try again
     //Turn human chocie into a number so we can compute it
     switch (humanChoice) {
-        case humanChoice = "rock" : humanNum = 0;
-        return rock;
-        case humanChoice = "paper" : humanNum = 1;
-        return 1;
-        case humanChoice = "scissors": humanNum = 2;
-        return 2;
-        default: alert("Please Try Again")
+        case humanChoice = "rock": 
+        return "rock";
+        case humanChoice = "paper":
+        return "paper";
+        case humanChoice = "scissors":
+        return "scissors";
+        default: alert("Please Enter Choice Again")
     }
     }
 
-function playRound (humanChoice, computerChoice) {
-
+function playRound (humanSelection, computerSelection)  {
+    console.log(humanSelection);
+    console.log(computerSelection);
 }
 
 const humanSelection = getHumanChoice();
