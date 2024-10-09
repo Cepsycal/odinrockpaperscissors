@@ -36,34 +36,51 @@ function getHumanChoice () {
         alert("Please Enter Choice Again");
     }
 }
-
-function playRound (humanSelection, computerSelection)  {
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
+function playGame() {
     let humanScore = 0;
     let computerScore = 0;
-    //Calculate who won based on the number values given
-    if (humanSelection - computerSelection == 0) {
-        //play again no add point
-        alert("It is a tie!");
-    } else if (humanSelection - computerSelection == 1 || 
-                humanSelection - computerSelection == -2) {
-        humanScore = ++humanScore;
-        alert("You won this round! Your score is " + humanScore + " now!");
-        console.log(humanScore);
-    } else if (humanSelection - computerSelection == -1 || 
-                humanSelection - computerSelection == 2) {
-        computerScore = ++computerScore;
-        alert("The computer won this round! The computer's score is " + computerScore + " now!");
-        console.log("computer");
-        console.log(computerScore);
-    } else {
-        console.log(humanSelection - computerSelection);
-        console.log(humanSelection);
-        console.log(computerSelection);
-        console.log("The calculations aren't right");
-    }   
+    function playRound (humanSelection, computerSelection)  {
+        humanSelection = getHumanChoice();
+        computerSelection = getComputerChoice();
+        //Calculate who won based on the number values given
+        if (humanSelection - computerSelection == 0) {
+            //play again no add point
+            alert("It is a tie!");
+        } else if (humanSelection - computerSelection == 1 || 
+                    humanSelection - computerSelection == -2) {
+            humanScore = ++humanScore;
+            alert("You won this round! Your score is " + humanScore + " now!");
+            console.log(humanScore);
+        } else if (humanSelection - computerSelection == -1 || 
+                    humanSelection - computerSelection == 2) {
+            computerScore = ++computerScore;
+            alert("The computer won this round! The computer's score is " + computerScore + " now!");
+            console.log("computer");
+            console.log(computerScore);
+        } else {
+            console.log(humanSelection - computerSelection);
+            console.log(humanSelection);
+            console.log(computerSelection);
+            console.log("The calculations aren't right");
+        }   
+    }    
+    // Play the game 5 times
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    //Declare who won
+        if (humanScore > computerScore) {
+            alert ("You won against the computer!");
+        } else if (computerScore > humanScore) {
+            alert ("The computer won against you!");
+    //Later, make a loop here
+        } else {
+            playRound();
+            alert ("It is a tie! I will make this go on later.")}
 }
+playGame();
 
 
 
