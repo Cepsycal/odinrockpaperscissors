@@ -40,6 +40,8 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
     function playRound (humanSelection, computerSelection)  {
+        getComputerChoice();
+        getHumanChoice();
         humanSelection = getHumanChoice();
         computerSelection = getComputerChoice();
         //Calculate who won based on the number values given
