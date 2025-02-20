@@ -1,2 +1,2 @@
-# odinrockpaperscissors
-The actual version of rock paper scissors
+# Rock Paper Scissors
+A computer game made using JavaScript.
